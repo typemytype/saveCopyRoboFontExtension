@@ -28,6 +28,8 @@
 	<dict>
 		<key>repository</key>
 		<string>typemytype/saveCopyRoboFontExtension</string>
+		<key>summary</key>
+		<string>Save a version of UFO next the the current document.</string>
 	</dict>
 </dict>
 </plist>
