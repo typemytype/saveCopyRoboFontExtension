@@ -1,13 +1,14 @@
 from AppKit import *
 import os
 import datetime
-from lib.baseObjects import CallbackWrapper
 import vanilla.dialogs as dialogs
+from mojo.tools import CallbackWrapper
 from mojo.UI import CurrentFontWindow
+
 
 class SaveCopyMenu(object):
 
-    def __init__(self):        
+    def __init__(self):
         title = "Save Copy..."
         mainMenu = NSApp().mainMenu()
         fileMenu = mainMenu.itemWithTitle_("File")
@@ -41,7 +42,7 @@ class SaveCopyMenu(object):
                 fileName = "%s-%s%s" % (fileName, stamp, ext)
 
             dialogs.putFile(title="Save a Copy as..", fileName=fileName, fileTypes=["ufo"], parentWindow=w.window(), resultCallback=self.saveCopy)
-                
+
     def saveCopy(self, path):
         f = CurrentFont().copy()
         f.save(path)
