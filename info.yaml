@@ -1,0 +1,10 @@
+name: SaveCopy
+developer: TypeMyType
+developerURL: http://typemytype.com
+launchAtStartUp: true
+mainScript: saveCopy.py
+version: '1.1'
+addToMenu: []
+html: false
+requiresVersionMajor: '1'
+requiresVersionMinor: '6'
