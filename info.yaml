@@ -3,7 +3,7 @@ developer: TypeMyType
 developerURL: http://typemytype.com
 launchAtStartUp: true
 mainScript: saveCopy.py
-version: '1.1'
+version: '1.2'
 addToMenu: []
 html: false
 requiresVersionMajor: '1'

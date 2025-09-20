@@ -1,4 +1,4 @@
-from AppKit import *
+import AppKit
 import os
 import datetime
 import vanilla.dialogs as dialogs
@@ -10,7 +10,7 @@ class SaveCopyMenu(object):
 
     def __init__(self):
         title = "Save Copy..."
-        mainMenu = NSApp().mainMenu()
+        mainMenu = AppKit.NSApp().mainMenu()
         fileMenu = mainMenu.itemWithTitle_("File")
 
         if not fileMenu:
@@ -24,8 +24,8 @@ class SaveCopyMenu(object):
         index = fileMenu.indexOfItemWithTitle_("Save")
         self.target = CallbackWrapper(self.callback)
 
-        newItem = NSMenuItem.alloc().initWithTitle_action_keyEquivalent_(title, "action:", "s")
-        modifier = NSCommandKeyMask | NSControlKeyMask
+        newItem = AppKit.NSMenuItem.alloc().initWithTitle_action_keyEquivalent_(title, "action:", "s")
+        modifier = AppKit.NSCommandKeyMask | AppKit.NSControlKeyMask
         newItem.setKeyEquivalentModifierMask_(modifier)
         newItem.setTarget_(self.target)
 
@@ -49,5 +49,3 @@ class SaveCopyMenu(object):
 
 
 SaveCopyMenu()
-
-
